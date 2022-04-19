@@ -80,7 +80,7 @@ namespace Cofoundry.Samples.Mail.AdminMailTemplates
             template.SubjectFormat = "Your password has been reset!";
 
             // customize the view file
-            template.ViewFile = "~/Cofoundry/Admin/MailTemplates/Templates/AccountRecoveryMailTemplate";
+            template.ViewFile = "~/Cofoundry/MailTemplates/Admin/Templates/PasswordResetMailTemplate";
 
             return template;
         }
