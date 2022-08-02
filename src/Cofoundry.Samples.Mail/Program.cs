@@ -1,17 +1,12 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
+﻿var builder = WebApplication.CreateBuilder(args);
 
-namespace Cofoundry.Samples.Mail
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateWebHostBuilder(args).Build().Run();
-        }
+builder.Services
+    .AddControllersWithViews()
+    .AddCofoundry(builder.Configuration);
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
-    }
-}
+var app = builder.Build();
+
+app.UseHttpsRedirection();
+app.UseCofoundry();
+
+app.Run();
