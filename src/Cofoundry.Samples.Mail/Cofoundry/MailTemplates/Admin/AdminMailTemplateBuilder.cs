@@ -1,4 +1,4 @@
-﻿using Cofoundry.Core.Mail;
+using Cofoundry.Core.Mail;
 using Cofoundry.Core.Web;
 using Cofoundry.Domain.MailTemplates;
 

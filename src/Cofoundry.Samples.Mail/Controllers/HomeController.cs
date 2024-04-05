@@ -1,4 +1,4 @@
-﻿using Cofoundry.Core.Mail;
+using Cofoundry.Core.Mail;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cofoundry.Samples.Mail.Controllers;

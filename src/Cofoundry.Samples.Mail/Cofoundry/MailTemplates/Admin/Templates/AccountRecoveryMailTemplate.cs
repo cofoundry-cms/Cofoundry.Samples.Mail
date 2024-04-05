@@ -1,4 +1,4 @@
-﻿using Cofoundry.Core.Mail;
+using Cofoundry.Core.Mail;
 
 namespace Cofoundry.Samples.Mail.AdminMailTemplates;
 
@@ -26,16 +26,16 @@ public class AccountRecoveryMailTemplate : IMailTemplate
     /// In our custom template we are including the first name field which 
     /// is not included in the standard Cofoundry template.
     /// </summary>
-    public string DisplayName { get; set; }
+    public string? DisplayName { get; set; }
 
     /// <summary>
     /// The username of the user requesting to recover their account.
     /// </summary>
-    public string Username { get; set; }
+    public string Username { get; set; } = string.Empty;
 
     /// <summary>
     /// The absolute url for the complete account recovery form e.g.
     /// "https://example.com/admin/account-recovery-complete?t={token}".
     /// </summary>
-    public string RecoveryUrl { get; set; }
+    public string RecoveryUrl { get; set; } = string.Empty;
 }

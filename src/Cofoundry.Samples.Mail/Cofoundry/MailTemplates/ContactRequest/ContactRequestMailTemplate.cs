@@ -1,4 +1,4 @@
-﻿using Cofoundry.Core.Mail;
+using Cofoundry.Core.Mail;
 
 namespace Cofoundry.Samples.Mail;
 
@@ -29,5 +29,5 @@ public class ContactRequestMailTemplate : IMailTemplate
     /// Here we add the contact request as a custom property so we can
     /// write it out in our view.
     /// </summary>
-    public ContactRequest Request { get; set; }
+    public required ContactRequest Request { get; set; }
 }
